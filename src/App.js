@@ -3,6 +3,7 @@ import './bootstrap.min.css';
 import Login from './components/Login';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
+import LogHome from './components/LogHome';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home></Home>
+        </Route>
+        <Route exact path="/loghome">
+          <LogHome></LogHome>
         </Route>
       </Switch>
     </Router>
