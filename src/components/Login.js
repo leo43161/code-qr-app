@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 const Login = () => {
   return (
     <div className="container">
-      <Card className="col-6 mx-auto mt-5">
+      <Card className="col-12 mx-auto">
         <Card.Body>
           <Form>
             <Form.Group>
