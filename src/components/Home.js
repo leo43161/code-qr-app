@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <h5>Inicie sesion para continuar</h5>
       </div>
       <div className="mt-3">
-        <Button variant="primary">Iniciar Sesion</Button>
+        <Link to="/login" className="btn btn-primary">Iniciar Sesion</Link>
       </div>
     </div>
   );
