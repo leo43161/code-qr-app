@@ -16,7 +16,7 @@ const LogHome = () => {
         </Container>
       </Jumbotron>
       <div className="d-flex justify-content-around m-0">
-        <Link to="/login" className="btn btn-primary">
+        <Link to="/addqr" className="btn btn-primary">
           Crear codigo QR
         </Link>
         <Link to="/login" className="btn btn-primary">

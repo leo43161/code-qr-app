@@ -4,6 +4,7 @@ import Login from './components/Login';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
 import LogHome from './components/LogHome';
+import AddQr from './components/AddQr';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/loghome">
           <LogHome></LogHome>
+        </Route>
+        <Route exact path="/addqr">
+          <AddQr></AddQr>
         </Route>
       </Switch>
     </Router>
