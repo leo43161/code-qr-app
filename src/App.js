@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
 import LogHome from './components/LogHome';
 import AddQr from './components/AddQr';
+import ListaQr from './components/ListaQr';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/addqr">
           <AddQr></AddQr>
+        </Route>
+        <Route exact path="/listaqr">
+          <ListaQr></ListaQr>
         </Route>
       </Switch>
     </Router>
