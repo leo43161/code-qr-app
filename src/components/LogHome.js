@@ -19,7 +19,7 @@ const LogHome = () => {
         <Link to="/addqr" className="btn btn-primary">
           Crear codigo QR
         </Link>
-        <Link to="/login" className="btn btn-primary">
+        <Link to="/listaqr" className="btn btn-primary">
           Administrar codigos
         </Link>
       </div>
