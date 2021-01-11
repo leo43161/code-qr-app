@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
 import Button from "react-bootstrap/Button";
@@ -17,6 +17,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown"; */
 
 const ListaQr = () => {
+  const [QRsType, setQRsType] = useState(true);
   return (
     <div>
       <h4 className="text-center text-white bg-dark m-0 py-2">
@@ -29,7 +30,8 @@ const ListaQr = () => {
             variant="secondary"
             name="radio"
             value="1"
-            checked={true}
+            checked={QRsType === true}
+            onChange={() => setQRsType(true)}
           >
             Activos
           </ToggleButton>
@@ -38,7 +40,8 @@ const ListaQr = () => {
             variant="secondary"
             name="radio"
             value="2"
-            checked={false}
+            checked={QRsType === false}
+            onChange={() => setQRsType(false)}
           >
             Quemados
           </ToggleButton>
