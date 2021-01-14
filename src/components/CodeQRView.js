@@ -34,6 +34,11 @@ const CodeQRView = () => {
             <p className="text-muted text-center m-0">
               <em>Creado: 14 de Enero 05:01 </em>
             </p>
+            <p className="text-muted text-center m-0">
+              <em>
+                Estado: <span className="text-primary">Activo</span>{" "}
+              </em>
+            </p>
           </div>
           <hr className="bg-light" />
           <div>
