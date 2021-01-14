@@ -6,6 +6,7 @@ import Home from './components/Home';
 import LogHome from './components/LogHome';
 import AddQr from './components/AddQr';
 import ListaQr from './components/ListaQr';
+import CodeQRView from './components/CodeQRView';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path="/listaqr">
           <ListaQr></ListaQr>
+        </Route>
+        <Route exact path="/codeqrview">
+          <CodeQRView></CodeQRView>
         </Route>
       </Switch>
     </Router>
