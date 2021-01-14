@@ -43,7 +43,7 @@ const AddQr = () => {
     <div className="container-fluid p-0">
       <div className="p-3 bg-dark">
         <img
-          src={process.env.PUBLIC_URL + "/img/codigo-qr.jpg"}
+          src={process.env.PUBLIC_URL + "/img/codigo-qr.png"}
           className="img-fluid"
           alt="qr-img"
         />

@@ -20,7 +20,7 @@ const CodeQRView = () => {
       <div className="py-md-5 p-3 bg-dark w-100 d-flex flex-md-row align-items-md-center justify-content-md-around flex-column">
         <div className="col-md-5 p-0 text-md-center">
           <img
-            src={process.env.PUBLIC_URL + "/img/codigo-qr.jpg"}
+            src={process.env.PUBLIC_URL + "/img/codigo-qr.png"}
             className="img-fluid"
             alt="qr-img"
           />
