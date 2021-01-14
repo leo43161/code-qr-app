@@ -31,10 +31,10 @@ const CodeQRView = () => {
             <h2 className="text-center">Cerveza 2x1</h2>
             <h4>Destinatario: Silvia Perez</h4>
             <h5>Descripcion: Promocion de 2 cervezas</h5>
-            <p className="text-muted text-center m-0">
+            <p className="text-muted text-md-center m-0">
               <em>Creado: 14 de Enero 05:01 </em>
             </p>
-            <p className="text-muted text-center m-0">
+            <p className="text-muted text-md-center m-0">
               <em>
                 Estado: <span className="text-primary">Activo</span>{" "}
               </em>
