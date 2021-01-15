@@ -7,6 +7,7 @@ import LogHome from './components/LogHome';
 import AddQr from './components/AddQr';
 import ListaQr from './components/ListaQr';
 import CodeQRView from './components/CodeQRView';
+import BurnQr from './components/BurnQr';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route exact path="/codeqrview">
           <CodeQRView></CodeQRView>
+        </Route>
+        <Route exact path="/burnqr">
+          <BurnQr></BurnQr>
         </Route>
       </Switch>
     </Router>
