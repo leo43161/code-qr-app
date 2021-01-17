@@ -12,9 +12,6 @@ import {
   faEye,
   faPrint,
 } from "@fortawesome/free-solid-svg-icons";
-/* import ListGroup from "react-bootstrap/ListGroup";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown"; */
 
 const ListaQr = () => {
   const [QRsType, setQRsType] = useState(true);
@@ -49,9 +46,10 @@ const ListaQr = () => {
       </div>
       <div className="container mt-3">
         <CardColumns>
+          {/* 1 */}
           <Card>
-            <Card.Body className="d-md-flex justify-content-round align-items-center">
-              <div className="col-12">
+            <Card.Body className="d-flex flex-column justify-content-round align-items-center">
+              <div className="col-12 px-1">
                 <h3>Cerveza 2x1</h3>
                 <h5>Destinatario: Silvia Perez</h5>
                 <p>Descripcion: Promocion de 2 cervezas Groller</p>
@@ -60,38 +58,7 @@ const ListaQr = () => {
                 </p>
               </div>
               <div className="ml-md-1 mt-3 d-flex w-100">
-                <ButtonGroup className="w-100 d-md-none">
-                  <Button variant="dark">
-                    <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
-                  </Button>
-                  <Button variant="success">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </Button>
-                  <Button variant="primary">
-                    <FontAwesomeIcon icon={faPrint}></FontAwesomeIcon>
-                  </Button>
-                  <Button variant="warning">
-                    <FontAwesomeIcon icon={faFireAlt}></FontAwesomeIcon>
-                  </Button>
-                  <Button variant="danger">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </Button>
-                </ButtonGroup>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body className="d-md-flex justify-content-round align-items-center">
-              <div className="col-12">
-                <h3>Cerveza 2x1</h3>
-                <h5>Destinatario: Silvia Perez</h5>
-                <p>Descripcion: Promocion de 2 cervezas Groller</p>
-                <p className="text-muted m-0">
-                  <em>December 17</em>
-                </p>
-              </div>
-              <div className="ml-md-1 mt-3 d-flex w-100">
-                <ButtonGroup className="w-100 d-md-none">
+                <ButtonGroup className="w-100 d-flex flex-wrap">
                   <Button variant="dark">
                     <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                   </Button>
@@ -113,53 +80,6 @@ const ListaQr = () => {
           </Card>
         </CardColumns>
       </div>
-
-      {/* <ListGroup>
-        <ListGroup.Item className="d-flex justify-content-between">
-          <div className="align-middle h-100">Cerveza 2x1</div>
-          <div>
-            <DropdownButton variant="dark">
-              <Dropdown.Item>Editar</Dropdown.Item>
-              <Dropdown.Item>Eliminar</Dropdown.Item>
-              <Dropdown.Item>Quemar</Dropdown.Item>
-              <Dropdown.Item>Informacion</Dropdown.Item>
-            </DropdownButton>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item className="d-flex justify-content-between">
-          <div className="align-middle h-100">Cerveza 2x1</div>
-          <div>
-            <DropdownButton variant="dark">
-              <Dropdown.Item>Editar</Dropdown.Item>
-              <Dropdown.Item>Eliminar</Dropdown.Item>
-              <Dropdown.Item>Quemar</Dropdown.Item>
-              <Dropdown.Item>Informacion</Dropdown.Item>
-            </DropdownButton>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item className="d-flex justify-content-between">
-          <div className="align-middle h-100">Cerveza 2x1</div>
-          <div>
-            <DropdownButton variant="dark">
-              <Dropdown.Item>Editar</Dropdown.Item>
-              <Dropdown.Item>Eliminar</Dropdown.Item>
-              <Dropdown.Item>Quemar</Dropdown.Item>
-              <Dropdown.Item>Informacion</Dropdown.Item>
-            </DropdownButton>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item className="d-flex justify-content-between">
-          <div className="align-middle h-100">Cerveza 2x1</div>
-          <div>
-            <DropdownButton variant="dark">
-              <Dropdown.Item>Editar</Dropdown.Item>
-              <Dropdown.Item>Eliminar</Dropdown.Item>
-              <Dropdown.Item>Quemar</Dropdown.Item>
-              <Dropdown.Item>Informacion</Dropdown.Item>
-            </DropdownButton>
-          </div>
-        </ListGroup.Item>
-      </ListGroup> */}
     </div>
   );
 };
