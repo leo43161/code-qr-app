@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom"; //sirve para redireccionar una pagina
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
@@ -9,8 +10,9 @@ import {
   faFacebookF,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import Swal from "sweetalert2";
 
-const AddQr = () => {
+const AddQr = (props) => {
   const [informacion, setInformacion] = useState({
     titulo: "",
     destinatario: "",
@@ -54,7 +56,7 @@ const AddQr = () => {
 
   console.log(Date());
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (
@@ -66,15 +68,36 @@ const AddQr = () => {
     }
 
     const datos = {
-      titulo:informacion.titulo,
-      destinatario:informacion.destinatario,
-      descripcion:informacion.descripcion,
+      titulo: informacion.titulo,
+      destinatario: informacion.destinatario,
+      descripcion: informacion.descripcion,
       estado: true,
-      creado: getDate()
-    }
+      creado: getDate(),
+    };
 
     try {
-    } catch (error) {}
+      const cabecera = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datos),
+      };
+      const resultado = await fetch("http://localhost:3000/qrs", cabecera);
+      if (resultado.status === 201) {
+        Swal.fire(
+          "Producto creado!",
+          "El producto se creo correctamente!",
+          "success"
+        );
+      }
+
+      props.setRecargarQrs(true);
+      /* //redireccionar al usuario
+      props.history.push("/listaqr"); */
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -116,7 +139,7 @@ const AddQr = () => {
             </p>
             <div>
               <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Group>
                   <Form.Label>
                     Título <span className="text-danger">*</span>
                   </Form.Label>
@@ -128,7 +151,7 @@ const AddQr = () => {
                     onChange={handleChange}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Group>
                   <Form.Label>Destinatario</Form.Label>
                   <Form.Control
                     type="text"
@@ -137,7 +160,7 @@ const AddQr = () => {
                     onChange={handleChange}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Group>
                   <Form.Label>
                     Descripción <span className="text-danger">*</span>
                   </Form.Label>
@@ -169,4 +192,4 @@ const AddQr = () => {
   );
 };
 
-export default AddQr;
+export default withRouter(AddQr);
