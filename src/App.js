@@ -43,7 +43,7 @@ function App() {
           <LogHome></LogHome>
         </Route>
         <Route exact path="/addqr">
-          <AddQr></AddQr>
+          <AddQr setRecargarQrs={setRecargarQrs}></AddQr>
         </Route>
         <Route exact path="/listaqr">
           <ListaQr
