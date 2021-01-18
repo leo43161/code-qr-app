@@ -17,6 +17,32 @@ const AddQr = () => {
     descripcion: "",
   });
 
+  /* Tomar Fecha y Hora Actual */
+
+  const getDate = () => {
+    const now = new Date();
+    const meses = [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ];
+    const fecha = now.getDate() + " de " + meses[now.getMonth()];
+    const hora = now.getHours() + ":" + now.getMinutes();
+    console.log(fecha + " " + hora);
+    return fecha + " " + hora;
+  };
+
+  /*  */
+
   const [error, setError] = useState(false);
 
   const handleChange = (e) => {
@@ -26,6 +52,8 @@ const AddQr = () => {
     });
   };
 
+  console.log(Date());
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -34,9 +62,19 @@ const AddQr = () => {
       informacion.descripcion.trim() === ""
     ) {
       setError(true);
-    } else {
-      setError(false);
+      return;
     }
+
+    const datos = {
+      titulo:informacion.titulo,
+      destinatario:informacion.destinatario,
+      descripcion:informacion.descripcion,
+      estado: true,
+      creado: getDate()
+    }
+
+    try {
+    } catch (error) {}
   };
 
   return (
