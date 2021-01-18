@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CardColumns from "react-bootstrap/CardColumns";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
+import CodeQr from "./CodeQr";
 
 const ListaQr = (props) => {
   const [QRsType, setQRsType] = useState(true);
@@ -38,7 +39,9 @@ const ListaQr = (props) => {
       <div className="container mt-3">
         <CardColumns>
           {/* 1 */}
-
+          {props.codigosQr.map((qr) => (
+            <CodeQr></CodeQr>
+          ))}
         </CardColumns>
       </div>
     </div>
