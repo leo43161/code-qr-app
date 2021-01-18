@@ -3,7 +3,7 @@
     {
       "titulo": "Cerveza 2x1",
       "destinatario": "Silvia Perez",
-      "descripcion": "Promocion de 2 cervezas",
+      "descripcion": "Promocion de 2 cervezas.",
       "estado": true,
       "creado": "4 de Enero 05:01",
       "id": 1
@@ -11,7 +11,7 @@
     {
         "titulo": "Vale por un helado",
         "destinatario": "Julia Dias",
-        "descripcion": "Vale por un helado de agua",
+        "descripcion": "Vale por un helado de agua.",
         "estado": true,
         "creado": "1 de Enero 16:01",
         "id": 2
@@ -19,7 +19,7 @@
     {
         "titulo": "Descuento 20%",
         "destinatario": "Pablo Robles",
-        "descripcion": "Se debe realizar un descuento del 20% en cualquier producto",
+        "descripcion": "Se debe realizar un descuento del 20% en cualquier producto.",
         "estado": true,
         "creado": "12 de Enero 14:25",
         "id": 3

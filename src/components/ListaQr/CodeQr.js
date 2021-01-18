@@ -11,17 +11,17 @@ import {
   faPrint,
 } from "@fortawesome/free-solid-svg-icons";
 
-const CodeQr = () => {
+const CodeQr = (props) => {
   return (
     <div>
       <Card>
         <Card.Body className="d-flex flex-column justify-content-round align-items-center">
           <div className="col-12 px-1">
-            <h3>Cerveza 2x1</h3>
-            <h5>Destinatario: Silvia Perez</h5>
-            <p>Descripcion: Promocion de 2 cervezas Groller</p>
+            <h3>{props.qr.titulo}</h3>
+            <h5>Destinatario: {props.qr.destinatario}</h5>
+            <p>Descripcion: {props.qr.descripcion}</p>
             <p className="text-muted m-0">
-              <em>December 17</em>
+              <em>{props.qr.creado}</em>
             </p>
           </div>
           <div className="ml-md-1 mt-3 d-flex w-100">

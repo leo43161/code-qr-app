@@ -40,7 +40,7 @@ const ListaQr = (props) => {
         <CardColumns>
           {/* 1 */}
           {props.codigosQr.map((qr) => (
-            <CodeQr></CodeQr>
+            <CodeQr key={qr.id} setRecargarQrs={props.setRecargarQrs} qr={qr}></CodeQr>
           ))}
         </CardColumns>
       </div>
