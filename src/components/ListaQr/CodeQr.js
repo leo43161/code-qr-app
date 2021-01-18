@@ -14,7 +14,7 @@ import {
 const CodeQr = (props) => {
   return (
     <div>
-      <Card>
+      <Card className="mt-1">
         <Card.Body className="d-flex flex-column justify-content-round align-items-center">
           <div className="col-12 px-1">
             <h3>{props.qr.titulo}</h3>

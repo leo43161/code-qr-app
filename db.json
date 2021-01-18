@@ -20,7 +20,7 @@
         "titulo": "Descuento 20%",
         "destinatario": "Pablo Robles",
         "descripcion": "Se debe realizar un descuento del 20% en cualquier producto.",
-        "estado": true,
+        "estado": false,
         "creado": "12 de Enero 14:25",
         "id": 3
     }

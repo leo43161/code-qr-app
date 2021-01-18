@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardColumns from "react-bootstrap/CardColumns";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
@@ -6,7 +6,21 @@ import CodeQr from "./CodeQr";
 
 const ListaQr = (props) => {
   const [QRsType, setQRsType] = useState(true);
-  console.log(props.codigosQr);
+  const [qrsFiltrados, setQrsFiltrados] = useState([]);
+  
+  useEffect(() => {
+    const codigosQr = props.codigosQr;
+    let filtrarCodigos = codigosQr.filter((qr) => {
+      if (QRsType) {
+        return qr.estado === true;
+      } else {
+        return qr.estado === false;
+      }
+    });
+    setQrsFiltrados(filtrarCodigos);
+    console.log(filtrarCodigos);
+  }, [QRsType, props.codigosQr]);
+
   return (
     <div>
       <h4 className="text-center text-white bg-dark m-0 py-2">
@@ -39,8 +53,12 @@ const ListaQr = (props) => {
       <div className="container mt-3">
         <CardColumns>
           {/* 1 */}
-          {props.codigosQr.map((qr) => (
-            <CodeQr key={qr.id} setRecargarQrs={props.setRecargarQrs} qr={qr}></CodeQr>
+          {qrsFiltrados.map((qr) => (
+            <CodeQr
+              key={qr.id}
+              setRecargarQrs={props.setRecargarQrs}
+              qr={qr}
+            ></CodeQr>
           ))}
         </CardColumns>
       </div>
