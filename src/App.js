@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import LogHome from "./components/LogHome";
 import AddQr from "./components/AddQr";
-import ListaQr from "./components/ListaQr";
-import CodeQRView from "./components/CodeQRView";
+import ListaQr from "./components/ListaQr/ListaQr";
+import CodeQRView from "./components/ListaQr/CodeQRView";
 import BurnQr from "./components/BurnQr";
 import { useEffect, useState } from "react";
 
@@ -46,7 +46,10 @@ function App() {
           <AddQr></AddQr>
         </Route>
         <Route exact path="/listaqr">
-          <ListaQr></ListaQr>
+          <ListaQr
+            codigosQr={codigosQr}
+            setRecargarQrs={setRecargarQrs}
+          ></ListaQr>
         </Route>
         <Route exact path="/codeqrview">
           <CodeQRView></CodeQRView>
