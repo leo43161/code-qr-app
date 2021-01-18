@@ -9,6 +9,7 @@ import ListaQr from "./components/ListaQr/ListaQr";
 import CodeQRView from "./components/ListaQr/CodeQRView";
 import BurnQr from "./components/BurnQr";
 import { useEffect, useState } from "react";
+import Header from "./components/Common/Header";
 
 function App() {
   const [codigosQr, setCodigosQr] = useState([]);
@@ -32,6 +33,7 @@ function App() {
   };
   return (
     <Router>
+      <Header></Header>
       <Switch>
         <Route exact path="/login">
           <Login></Login>
